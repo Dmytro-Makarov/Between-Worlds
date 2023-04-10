@@ -1,15 +1,15 @@
-[gd_scene load_steps=15 format=3 uid="uid://dmu1omb8k54xj"]
+[gd_scene load_steps=15 format=3 uid="uid://bqswofsf08wrx"]
 
 [ext_resource type="PackedScene" path="res://Player/Player.tscn" id="1_e2wmx"]
 [ext_resource type="Texture2D" uid="uid://bldq47w3th5aa" path="res://Resources/Textures/World/GrassBackground.png" id="1_lvri7"]
 [ext_resource type="PackedScene" path="res://World/Bush.tscn" id="2_i4agf"]
 [ext_resource type="Texture2D" uid="uid://cdf44gcnuh4a5" path="res://Resources/Textures/World/Tilesets/DirtTileset.png" id="2_kn44c"]
 [ext_resource type="Texture2D" uid="uid://cl53b2f7f2v5h" path="res://Resources/Textures/World/Tilesets/CliffTileset.png" id="3_acbcw"]
-[ext_resource type="PackedScene" uid="uid://mtmw5lqx6aj6" path="res://camera_2d.tscn" id="4_337bs"]
+[ext_resource type="PackedScene" path="res://Camera2D.tscn" id="4_337bs"]
 [ext_resource type="PackedScene" path="res://Enemies/Bat.tscn" id="5_du7x4"]
 [ext_resource type="PackedScene" path="res://World/Grass.tscn" id="6_msqla"]
-[ext_resource type="PackedScene" path="res://World/tree.tscn" id="8_ajfox"]
-[ext_resource type="PackedScene" path="res://UI/health_ui.tscn" id="8_dvhxt"]
+[ext_resource type="PackedScene" uid="uid://dhoc0thtpgqkp" path="res://World/tree.tscn" id="8_ajfox"]
+[ext_resource type="PackedScene" uid="uid://f8wn8715ak6a" path="res://UI/HealthUI.tscn" id="8_dvhxt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nyjvj"]
 texture = ExtResource("2_kn44c")

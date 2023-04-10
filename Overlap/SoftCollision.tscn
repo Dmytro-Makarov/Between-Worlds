@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://b3m2xjtivn7ri"]
+[gd_scene load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://Overlap/soft_collision.gd" id="1_0lojx"]
+[ext_resource type="Script" path="res://Overlap/SoftCollision.gd" id="1_0lojx"]
 
 [node name="SoftCollision" type="Area2D"]
 collision_layer = 64

@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://dlq5k2puy4nj0"]
+[gd_scene load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://Enemies/wander_controller.gd" id="1_shi58"]
+[ext_resource type="Script" path="res://Enemies/WanderController.gd" id="1_shi58"]
 
 [node name="WanderController" type="Node2D"]
 script = ExtResource("1_shi58")

@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://mtmw5lqx6aj6"]
+[gd_scene load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://camera_2d.gd" id="1_8ud4t"]
+[ext_resource type="Script" path="res://Camera2D.gd" id="1_8ud4t"]
 
 [node name="Camera2D" type="Camera2D"]
 position = Vector2(648, 360)

@@ -8,8 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://c0nbn7nlx3j7h" path="res://Stats.tscn" id="4_drj8g"]
 [ext_resource type="PackedScene" uid="uid://cxu3pqvvdwwps" path="res://Overlap/PlayerDetectionZone.tscn" id="6_d261f"]
 [ext_resource type="PackedScene" uid="uid://di43oqfljsrhx" path="res://Overlap/Hitbox.tscn" id="7_m4vvd"]
-[ext_resource type="PackedScene" uid="uid://b3m2xjtivn7ri" path="res://Overlap/soft_collision.tscn" id="8_fq3jh"]
-[ext_resource type="PackedScene" uid="uid://dlq5k2puy4nj0" path="res://Enemies/wander_controller.tscn" id="9_tk5sw"]
+[ext_resource type="PackedScene" path="res://Overlap/SoftCollision.tscn" id="8_fq3jh"]
+[ext_resource type="PackedScene" path="res://Enemies/WanderController.tscn" id="9_tk5sw"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_0ionk"]
 resource_local_to_scene = true

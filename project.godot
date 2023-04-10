@@ -11,13 +11,13 @@ config_version=5
 [application]
 
 config/name="Between Worlds"
-run/main_scene="res://World.tscn"
+run/main_scene="res://Levels/Top2D/WA_00.tscn"
 config/features=PackedStringArray("4.0", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-PlayerStats="*res://Player/player_stats.tscn"
+PlayerStats="*res://Player/PlayerStats.tscn"
 
 [display]
 
