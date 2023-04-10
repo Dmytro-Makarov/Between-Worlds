@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://b8jn2kxyutfsq"]
+[gd_scene load_steps=4 format=3]
 
-[ext_resource type="Texture2D" uid="uid://b1jqw8gd6u8uk" path="res://World/Bush.png" id="1_0egrf"]
-[ext_resource type="Texture2D" uid="uid://c1vvca5l5ubps" path="res://Shadows/LargeShadow.png" id="1_1n0sw"]
+[ext_resource type="Texture2D" uid="uid://b1jqw8gd6u8uk" path="res://Resources/Textures/World/Bush.png" id="1_0egrf"]
+[ext_resource type="Texture2D" uid="uid://c1vvca5l5ubps" path="res://Resources/Textures/Shadows/LargeShadow.png" id="1_1n0sw"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4tx07"]
 radius = 8.0

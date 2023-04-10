@@ -1,6 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://d2jx8rjqqyixb"]
+[gd_scene load_steps=9 format=3]
 
-[ext_resource type="Texture2D" uid="uid://hn0kkd0b5bxl" path="res://Effects/GrassEffect.png" id="1_ywupo"]
+[ext_resource type="Texture2D" uid="uid://hn0kkd0b5bxl" path="res://Resources/Textures/Effects/GrassEffect.png" id="1_ywupo"]
 [ext_resource type="Script" path="res://Effects/Effect.gd" id="2_fksgl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r7h35"]

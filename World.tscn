@@ -1,18 +1,18 @@
-[gd_scene load_steps=15 format=3 uid="uid://dw72xk1y12fmm"]
+[gd_scene load_steps=15 format=3 uid="uid://dmu1omb8k54xj"]
 
-[ext_resource type="PackedScene" uid="uid://bgnsej62srgdc" path="res://Player/Player.tscn" id="1_e2wmx"]
-[ext_resource type="Texture2D" uid="uid://bldq47w3th5aa" path="res://World/GrassBackground.png" id="1_twd4m"]
-[ext_resource type="PackedScene" uid="uid://b8jn2kxyutfsq" path="res://World/Bush.tscn" id="2_i4agf"]
-[ext_resource type="Texture2D" uid="uid://cdf44gcnuh4a5" path="res://World/DirtTileset.png" id="2_mgrxq"]
-[ext_resource type="Texture2D" uid="uid://cl53b2f7f2v5h" path="res://World/CliffTileset.png" id="3_8nw5w"]
+[ext_resource type="PackedScene" path="res://Player/Player.tscn" id="1_e2wmx"]
+[ext_resource type="Texture2D" uid="uid://bldq47w3th5aa" path="res://Resources/Textures/World/GrassBackground.png" id="1_lvri7"]
+[ext_resource type="PackedScene" path="res://World/Bush.tscn" id="2_i4agf"]
+[ext_resource type="Texture2D" uid="uid://cdf44gcnuh4a5" path="res://Resources/Textures/World/Tilesets/DirtTileset.png" id="2_kn44c"]
+[ext_resource type="Texture2D" uid="uid://cl53b2f7f2v5h" path="res://Resources/Textures/World/Tilesets/CliffTileset.png" id="3_acbcw"]
 [ext_resource type="PackedScene" uid="uid://mtmw5lqx6aj6" path="res://camera_2d.tscn" id="4_337bs"]
-[ext_resource type="PackedScene" uid="uid://7lumd01nbkqs" path="res://Enemies/Bat.tscn" id="5_du7x4"]
-[ext_resource type="PackedScene" uid="uid://e25kg61kgy7q" path="res://World/Grass.tscn" id="6_msqla"]
-[ext_resource type="PackedScene" uid="uid://blin8xouq5au5" path="res://World/tree.tscn" id="8_ajfox"]
-[ext_resource type="PackedScene" uid="uid://nrtr8qiwpuk4" path="res://UI/health_ui.tscn" id="8_dvhxt"]
+[ext_resource type="PackedScene" path="res://Enemies/Bat.tscn" id="5_du7x4"]
+[ext_resource type="PackedScene" path="res://World/Grass.tscn" id="6_msqla"]
+[ext_resource type="PackedScene" path="res://World/tree.tscn" id="8_ajfox"]
+[ext_resource type="PackedScene" path="res://UI/health_ui.tscn" id="8_dvhxt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nyjvj"]
-texture = ExtResource("2_mgrxq")
+texture = ExtResource("2_kn44c")
 1:1/0 = 0
 1:1/0/terrain_set = 0
 1:1/0/terrain = 0
@@ -350,7 +350,7 @@ terrain_set_0/terrain_0/color = Color(1, 0, 0, 1)
 sources/0 = SubResource("TileSetAtlasSource_nyjvj")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_skdha"]
-texture = ExtResource("3_8nw5w")
+texture = ExtResource("3_acbcw")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/terrain_set = 0
@@ -839,7 +839,7 @@ y_sort_enabled = true
 texture_repeat = 2
 position = Vector2(160, 96)
 scale = Vector2(1, 1.06667)
-texture = ExtResource("1_twd4m")
+texture = ExtResource("1_lvri7")
 region_enabled = true
 region_rect = Rect2(-210, -160, 510, 390)
 
