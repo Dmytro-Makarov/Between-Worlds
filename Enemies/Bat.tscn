@@ -1,9 +1,9 @@
 [gd_scene load_steps=27 format=3]
 
-[ext_resource type="Texture2D" uid="uid://0q4l3vxtphvt" path="res://Resources/Textures/Enemies/Bat/Bat.png" id="1_m3dwt"]
+[ext_resource type="Texture2D" uid="uid://0q4l3vxtphvt" path="res://Assets/TopDown2D/Textures/Enemies/Bat/Bat.png" id="1_m3dwt"]
 [ext_resource type="Script" path="res://Enemies/Bat.gd" id="1_qqijn"]
 [ext_resource type="Shader" path="res://WhiteColor.gdshader" id="2_a5jd4"]
-[ext_resource type="Texture2D" uid="uid://dpj6awg4epvmn" path="res://Resources/Textures/Shadows/SmallShadow.png" id="2_qcxbl"]
+[ext_resource type="Texture2D" uid="uid://dpj6awg4epvmn" path="res://Assets/TopDown2D/Textures/Shadows/SmallShadow.png" id="2_qcxbl"]
 [ext_resource type="PackedScene" uid="uid://dup2vkkck3yhw" path="res://Overlap/Hurtbox.tscn" id="3_l3q4d"]
 [ext_resource type="PackedScene" uid="uid://c0nbn7nlx3j7h" path="res://Stats.tscn" id="4_drj8g"]
 [ext_resource type="PackedScene" uid="uid://cxu3pqvvdwwps" path="res://Overlap/PlayerDetectionZone.tscn" id="6_d261f"]

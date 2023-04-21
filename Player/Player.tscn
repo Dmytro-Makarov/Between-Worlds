@@ -1,14 +1,14 @@
 [gd_scene load_steps=66 format=3]
 
 [ext_resource type="Script" path="res://Player/Player.gd" id="1_eo8wu"]
-[ext_resource type="Texture2D" uid="uid://dceaq6cj4akrj" path="res://Resources/Textures/Shadows/MediumShadow.png" id="2_iy03v"]
-[ext_resource type="Texture2D" uid="uid://bxc7lgvm0kqwr" path="res://Resources/Textures/Player/Player.png" id="2_nw186"]
+[ext_resource type="Texture2D" uid="uid://dceaq6cj4akrj" path="res://Assets/TopDown2D/Textures/Shadows/MediumShadow.png" id="2_iy03v"]
+[ext_resource type="Texture2D" uid="uid://bxc7lgvm0kqwr" path="res://Assets/TopDown2D/Textures/Player/Player.png" id="2_nw186"]
 [ext_resource type="Shader" path="res://WhiteColor.gdshader" id="3_f7yom"]
 [ext_resource type="PackedScene" uid="uid://di43oqfljsrhx" path="res://Overlap/Hitbox.tscn" id="3_odkie"]
-[ext_resource type="AudioStream" uid="uid://c3iewjlwq3n58" path="res://Resources/Audio/Sounds/Swipe.wav" id="4_0l2ur"]
+[ext_resource type="AudioStream" uid="uid://c3iewjlwq3n58" path="res://Assets/TopDown2D/Audio/Sounds/Swipe.wav" id="4_0l2ur"]
 [ext_resource type="Script" path="res://Player/SwordHitbox.gd" id="4_w106b"]
 [ext_resource type="PackedScene" uid="uid://dup2vkkck3yhw" path="res://Overlap/Hurtbox.tscn" id="5_6mki3"]
-[ext_resource type="AudioStream" uid="uid://bq7nqqajemdjy" path="res://Resources/Audio/Sounds/Evade.wav" id="5_vwlwi"]
+[ext_resource type="AudioStream" uid="uid://bq7nqqajemdjy" path="res://Assets/TopDown2D/Audio/Sounds/Evade.wav" id="5_vwlwi"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6s3mt"]
 shader = ExtResource("3_f7yom")
