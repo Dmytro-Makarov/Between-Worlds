@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene load_steps=2 format=3 uid="uid://l4sqfajl0dwn"]
 
 [ext_resource type="Script" path="res://Camera2D.gd" id="1_8ud4t"]
 

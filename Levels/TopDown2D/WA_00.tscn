@@ -1,18 +1,18 @@
-[gd_scene load_steps=15 format=3 uid="uid://ca6dpv2bu5wvr"]
+[gd_scene load_steps=16 format=3 uid="uid://b5ek1gn57qptb"]
 
-[ext_resource type="Texture2D" uid="uid://bldq47w3th5aa" path="res://Assets/TopDown2D/Textures/World/GrassBackground.png" id="1_c5i15"]
-[ext_resource type="Texture2D" uid="uid://cdf44gcnuh4a5" path="res://Assets/TopDown2D/Textures/World/Tilesets/DirtTileset.png" id="2_yho7f"]
-[ext_resource type="Texture2D" uid="uid://cl53b2f7f2v5h" path="res://Assets/TopDown2D/Textures/World/Tilesets/CliffTileset.png" id="3_y61ev"]
-[ext_resource type="PackedScene" path="res://Camera2D.tscn" id="4_oc2nm"]
-[ext_resource type="PackedScene" path="res://Player/Player.tscn" id="5_p1fsr"]
-[ext_resource type="PackedScene" path="res://Enemies/Bat.tscn" id="6_ke464"]
+[ext_resource type="Texture2D" uid="uid://bldq47w3th5aa" path="res://Art/TopDown2D/Textures/World/GrassBackground.png" id="1_l5c3x"]
+[ext_resource type="Texture2D" uid="uid://cdf44gcnuh4a5" path="res://Art/TopDown2D/Textures/World/Tilesets/DirtTileset.png" id="2_onysn"]
+[ext_resource type="Texture2D" uid="uid://cl53b2f7f2v5h" path="res://Art/TopDown2D/Textures/World/Tilesets/CliffTileset.png" id="3_deu4l"]
+[ext_resource type="PackedScene" uid="uid://l4sqfajl0dwn" path="res://Camera2D.tscn" id="4_oc2nm"]
+[ext_resource type="PackedScene" uid="uid://bkht7bsabm6kr" path="res://Enemies/Bat.tscn" id="6_ke464"]
 [ext_resource type="PackedScene" path="res://World/Bush.tscn" id="7_q7n7c"]
 [ext_resource type="PackedScene" path="res://World/Grass.tscn" id="8_k41i7"]
 [ext_resource type="PackedScene" path="res://World/tree.tscn" id="9_3botj"]
 [ext_resource type="PackedScene" path="res://UI/HealthUI.tscn" id="10_8d112"]
+[ext_resource type="PackedScene" uid="uid://d1o4isvtrkeuj" path="res://Player/player.tscn" id="10_jq1t1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nyjvj"]
-texture = ExtResource("2_yho7f")
+texture = ExtResource("2_onysn")
 1:1/0 = 0
 1:1/0/terrain_set = 0
 1:1/0/terrain = 0
@@ -350,7 +350,7 @@ terrain_set_0/terrain_0/color = Color(1, 0, 0, 1)
 sources/0 = SubResource("TileSetAtlasSource_nyjvj")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_skdha"]
-texture = ExtResource("3_y61ev")
+texture = ExtResource("3_deu4l")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/terrain_set = 0
@@ -832,6 +832,8 @@ terrain_set_0/terrain_0/name = "Cliff"
 terrain_set_0/terrain_0/color = Color(1, 0, 0, 1)
 sources/0 = SubResource("TileSetAtlasSource_skdha")
 
+[sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_6gsya"]
+
 [node name="World" type="Node2D"]
 
 [node name="Background" type="Sprite2D" parent="."]
@@ -839,38 +841,54 @@ y_sort_enabled = true
 texture_repeat = 2
 position = Vector2(160, 96)
 scale = Vector2(1, 1.06667)
-texture = ExtResource("1_c5i15")
+texture = ExtResource("1_l5c3x")
 region_enabled = true
 region_rect = Rect2(-210, -160, 510, 390)
 
 [node name="DirtPathTileMap" type="TileMap" parent="."]
+y_sort_enabled = true
 tile_set = SubResource("TileSet_jiio1")
 format = 2
 layer_0/tile_data = PackedInt32Array(393220, 131072, 2, 327684, 327680, 1, 262148, 65536, 0, 393219, 65536, 2, 327683, 65536, 1, 262147, 65536, 0, 393218, 65536, 2, 327682, 65536, 1, 262146, 65536, 0, 393217, 65536, 2, 327681, 65536, 1, 262145, 65536, 0, 393216, 65536, 2, 327680, 65536, 1, 262144, 65536, 0, 458751, 0, 2, 393215, 0, 1, 327679, 0, 0, 327700, 131072, 2, 262164, 131072, 0, 327699, 65536, 2, 262163, 65536, 0, 327698, 65536, 2, 262162, 65536, 0, 327697, 65536, 2, 262161, 65536, 0, 327696, 65536, 2, 262160, 65536, 0, 327695, 65536, 2, 262159, 65536, 0, 327694, 65536, 2, 262158, 327680, 2, 327693, 65536, 2, 262157, 65536, 1, 327692, 0, 2, 262156, 393216, 1, 196622, 131072, 1, 131086, 131072, 1, 65550, 131072, 0, 196621, 65536, 1, 131085, 65536, 1, 65549, 65536, 0, 196620, 65536, 1, 131084, 65536, 1, 65548, 65536, 0, 196619, 393216, 2, 131083, 0, 1, 65547, 589824, 0, 196618, 65536, 0, 65546, 0, 2, 11, 131072, 1, -65525, 131072, 0, 10, 0, 1, -65526, 0, 0, 262155, 65536, 2, 262154, 65536, 2, 262153, 65536, 2, 262152, 65536, 2, 262151, 65536, 2, 262150, 393216, 3, 262149, 327680, 0, 196617, 65536, 0, 196616, 65536, 0, 196615, 65536, 0, 196614, 0, 0, 720913, 131072, 2, 720912, 65536, 2, 720911, 65536, 2, 720910, 393216, 3, 720909, 65536, 3, 655377, 131072, 0, 655376, 65536, 0, 655375, 65536, 0, 655374, 0, 0, 720908, 0, 3, 327685, 131072, 2)
 
 [node name="DirtCliffTileMap" type="TileMap" parent="."]
+y_sort_enabled = true
 tile_set = SubResource("TileSet_2nna3")
 cell_quadrant_size = 32
 format = 2
 layer_0/tile_data = PackedInt32Array(0, 327680, 1, 1, 65536, 2, 2, 65536, 2, 3, 65536, 2, 4, 131072, 2, -65532, 131072, 0, -65533, 65536, 0, -65534, 65536, 0, -65535, 65536, 0, -65536, 65536, 0, -1, 0, 0, 65535, 0, 1, 9, 524288, 1, -65527, 65536, 0, -65528, 0, 0, -65526, 131072, 0, 262152, 0, 3, 262153, 589824, 3, 327689, 196608, 2, 196617, 0, 0, 196618, 327680, 0, 196619, 131072, 3, 262154, 131072, 2, 196612, 196608, 0, 262148, 458752, 2, 327684, 131072, 2, 327683, 65536, 2, 327682, 65536, 2, 327681, 65536, 2, 262145, 65536, 0, 262146, 65536, 0, 262147, 65536, 0, 262144, 0, 0, 327680, 0, 2, 131071, 0, 2, 65536, 131072, 2, 8, 0, 2, 10, 131072, 2, 65545, 196608, 2)
 
 [node name="Camera2D" parent="." instance=ExtResource("4_oc2nm")]
-position = Vector2(168, 48)
+position = Vector2(225, 50)
 
 [node name="TopLeft" parent="Camera2D/Limits" index="0"]
 position = Vector2(-32, -32)
+gizmo_extents = 20.0
 
 [node name="BottomRight" parent="Camera2D/Limits" index="1"]
-position = Vector2(384, 192)
+position = Vector2(320, 190)
+gizmo_extents = 20.0
+
+[node name="Player" parent="." instance=ExtResource("10_jq1t1")]
+y_sort_enabled = true
+position = Vector2(225, 50)
+metadata/_edit_group_ = true
+
+[node name="Sprite" parent="Player" index="0"]
+position = Vector2(0, 0)
+
+[node name="ShadowSprite" parent="Player" index="1"]
+y_sort_enabled = true
+position = Vector2(0, 0)
+
+[node name="AnimationTree" parent="Player" index="4"]
+parameters/playback = SubResource("AnimationNodeStateMachinePlayback_6gsya")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
+remote_path = NodePath("../../Camera2D")
 
 [node name="YSortNode" type="Node2D" parent="."]
 y_sort_enabled = true
-
-[node name="Player" parent="YSortNode" instance=ExtResource("5_p1fsr")]
-position = Vector2(168, 48)
-
-[node name="RemoteTransform2D" type="RemoteTransform2D" parent="YSortNode/Player"]
-remote_path = NodePath("../../../Camera2D")
 
 [node name="EnemyNode" type="Node2D" parent="YSortNode"]
 y_sort_enabled = true
@@ -963,3 +981,6 @@ offset_bottom = 14.0
 scale = Vector2(1.2, 1.2)
 
 [editable path="Camera2D"]
+[editable path="Player"]
+[editable path="Player/HitboxPivot/SwordHitbox"]
+[editable path="Player/Hurtbox"]

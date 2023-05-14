@@ -1,14 +1,14 @@
-[gd_scene load_steps=66 format=3]
+[gd_scene load_steps=66 format=3 uid="uid://d1o4isvtrkeuj"]
 
-[ext_resource type="Script" path="res://Player/Player.gd" id="1_eo8wu"]
-[ext_resource type="Texture2D" uid="uid://dceaq6cj4akrj" path="res://Assets/TopDown2D/Textures/Shadows/MediumShadow.png" id="2_iy03v"]
-[ext_resource type="Texture2D" uid="uid://bxc7lgvm0kqwr" path="res://Assets/TopDown2D/Textures/Player/Player.png" id="2_nw186"]
+[ext_resource type="Script" path="res://Player/player.gd" id="1_eo8wu"]
+[ext_resource type="Texture2D" uid="uid://dceaq6cj4akrj" path="res://Art/TopDown2D/Textures/Shadows/MediumShadow.png" id="2_ukgbn"]
 [ext_resource type="Shader" path="res://WhiteColor.gdshader" id="3_f7yom"]
 [ext_resource type="PackedScene" uid="uid://di43oqfljsrhx" path="res://Overlap/Hitbox.tscn" id="3_odkie"]
-[ext_resource type="AudioStream" uid="uid://c3iewjlwq3n58" path="res://Assets/TopDown2D/Audio/Sounds/Swipe.wav" id="4_0l2ur"]
+[ext_resource type="Texture2D" uid="uid://bxc7lgvm0kqwr" path="res://Art/TopDown2D/Textures/Player/Player.png" id="4_gycop"]
 [ext_resource type="Script" path="res://Player/SwordHitbox.gd" id="4_w106b"]
 [ext_resource type="PackedScene" uid="uid://dup2vkkck3yhw" path="res://Overlap/Hurtbox.tscn" id="5_6mki3"]
-[ext_resource type="AudioStream" uid="uid://bq7nqqajemdjy" path="res://Assets/TopDown2D/Audio/Sounds/Evade.wav" id="5_vwlwi"]
+[ext_resource type="AudioStream" uid="uid://c3iewjlwq3n58" path="res://Art/TopDown2D/Audio/Sounds/Swipe.wav" id="5_tnpkk"]
+[ext_resource type="AudioStream" uid="uid://bq7nqqajemdjy" path="res://Art/TopDown2D/Audio/Sounds/Evade.wav" id="6_blcyu"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6s3mt"]
 shader = ExtResource("3_f7yom")
@@ -81,7 +81,7 @@ tracks/4/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("4_0l2ur")
+"stream": ExtResource("5_tnpkk")
 }],
 "times": PackedFloat32Array(0.1)
 }
@@ -150,7 +150,7 @@ tracks/4/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("4_0l2ur")
+"stream": ExtResource("5_tnpkk")
 }],
 "times": PackedFloat32Array(0.1)
 }
@@ -219,7 +219,7 @@ tracks/4/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("4_0l2ur")
+"stream": ExtResource("5_tnpkk")
 }],
 "times": PackedFloat32Array(0.1)
 }
@@ -288,7 +288,7 @@ tracks/4/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("4_0l2ur")
+"stream": ExtResource("5_tnpkk")
 }],
 "times": PackedFloat32Array(0.1)
 }
@@ -428,7 +428,7 @@ tracks/2/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("5_vwlwi")
+"stream": ExtResource("6_blcyu")
 }],
 "times": PackedFloat32Array(0.1)
 }
@@ -473,7 +473,7 @@ tracks/2/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("5_vwlwi")
+"stream": ExtResource("6_blcyu")
 }],
 "times": PackedFloat32Array(0.1)
 }
@@ -518,7 +518,7 @@ tracks/2/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("5_vwlwi")
+"stream": ExtResource("6_blcyu")
 }],
 "times": PackedFloat32Array(0.1)
 }
@@ -563,7 +563,7 @@ tracks/2/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("5_vwlwi")
+"stream": ExtResource("6_blcyu")
 }],
 "times": PackedFloat32Array(0.1)
 }
@@ -798,6 +798,21 @@ height = 32.0
 radius = 6.0
 height = 20.0
 
+[sub_resource type="Animation" id="Animation_qeprg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite:material:shader_parameter/active")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
 [sub_resource type="Animation" id="Animation_6psia"]
 resource_name = "Start"
 length = 0.2
@@ -831,21 +846,6 @@ tracks/0/keys = {
 "values": [false]
 }
 
-[sub_resource type="Animation" id="Animation_qeprg"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite:material:shader_parameter/active")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_x1qk3"]
 _data = {
 "RESET": SubResource("Animation_qeprg"),
@@ -857,16 +857,16 @@ _data = {
 collision_layer = 2
 script = ExtResource("1_eo8wu")
 
-[node name="ShadowSprite" type="Sprite2D" parent="."]
-position = Vector2(0, 1)
-texture = ExtResource("2_iy03v")
-
 [node name="Sprite" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_6s3mt")
 position = Vector2(0, -9)
-texture = ExtResource("2_nw186")
+texture = ExtResource("4_gycop")
 hframes = 60
 frame = 55
+
+[node name="ShadowSprite" type="Sprite2D" parent="."]
+position = Vector2(0, 1)
+texture = ExtResource("2_ukgbn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
