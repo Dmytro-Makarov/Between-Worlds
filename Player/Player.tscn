@@ -857,16 +857,15 @@ _data = {
 collision_layer = 2
 script = ExtResource("1_eo8wu")
 
+[node name="ShadowSprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_ukgbn")
+
 [node name="Sprite" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_6s3mt")
 position = Vector2(0, -9)
 texture = ExtResource("4_gycop")
 hframes = 60
 frame = 55
-
-[node name="ShadowSprite" type="Sprite2D" parent="."]
-position = Vector2(0, 1)
-texture = ExtResource("2_ukgbn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
