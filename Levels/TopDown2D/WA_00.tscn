@@ -1,10 +1,10 @@
-[gd_scene load_steps=16 format=3 uid="uid://b5ek1gn57qptb"]
+[gd_scene load_steps=16 format=3]
 
 [ext_resource type="Texture2D" uid="uid://bldq47w3th5aa" path="res://Art/TopDown2D/Textures/World/GrassBackground.png" id="1_l5c3x"]
 [ext_resource type="Texture2D" uid="uid://cdf44gcnuh4a5" path="res://Art/TopDown2D/Textures/World/Tilesets/DirtTileset.png" id="2_onysn"]
 [ext_resource type="Texture2D" uid="uid://cl53b2f7f2v5h" path="res://Art/TopDown2D/Textures/World/Tilesets/CliffTileset.png" id="3_deu4l"]
 [ext_resource type="PackedScene" uid="uid://l4sqfajl0dwn" path="res://Camera2D.tscn" id="4_oc2nm"]
-[ext_resource type="Script" path="res://Player/Player.gd" id="6_dbqrp"]
+[ext_resource type="Script" path="res://Player/PlayerTD.gd" id="6_dbqrp"]
 [ext_resource type="PackedScene" uid="uid://bkht7bsabm6kr" path="res://Enemies/Bat.tscn" id="6_ke464"]
 [ext_resource type="PackedScene" path="res://World/Bush.tscn" id="7_q7n7c"]
 [ext_resource type="PackedScene" uid="uid://pkqo0g13mnvv" path="res://World/Grass.tscn" id="8_k41i7"]
