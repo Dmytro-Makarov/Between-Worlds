@@ -138,7 +138,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [Vector2(0, 2)]
+"values": [Vector2(0, 10)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -198,7 +198,7 @@ tracks/7/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [Vector2(0, 0)]
+"values": [Vector2(-32, -32)]
 }
 
 [sub_resource type="Animation" id="Animation_hu5kx"]
@@ -274,7 +274,7 @@ tracks/5/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [Vector2(4, 0), Vector2(4, 5), Vector2(2, 6)]
+"values": [Vector2(-4, 8), Vector2(-4, 13), Vector2(-6, 14)]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
@@ -298,7 +298,7 @@ tracks/7/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [Vector2(8, -8)]
+"values": [Vector2(-32, -32)]
 }
 
 [sub_resource type="Animation" id="Animation_o86ud"]
@@ -375,7 +375,7 @@ tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [Vector2(4, -7)]
+"values": [Vector2(-4, 1)]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
@@ -399,7 +399,7 @@ tracks/7/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [Vector2(8, -8)]
+"values": [Vector2(-32, -32)]
 }
 
 [sub_resource type="Animation" id="Animation_t3y86"]
@@ -472,10 +472,10 @@ tracks/5/path = NodePath("CollisionShape2D:position")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.3, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [Vector2(2, -8), Vector2(2, -8), Vector2(3, -7), Vector2(4, -7)]
+"values": [Vector2(-6, 0), Vector2(-5, 1), Vector2(-4, 1)]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
@@ -499,7 +499,7 @@ tracks/7/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [Vector2(8, -8)]
+"values": [Vector2(-32, -32)]
 }
 
 [sub_resource type="Animation" id="Animation_ttctj"]
@@ -551,7 +551,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
-"values": [Vector2(3, 9), Vector2(3, 6), Vector2(2, -4), Vector2(2, -9)]
+"values": [Vector2(-5, 17), Vector2(-5, 14), Vector2(-6, 4), Vector2(-6, -1)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -599,7 +599,7 @@ tracks/7/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [Vector2(8, -8)]
+"values": [Vector2(-32, -32)]
 }
 
 [sub_resource type="Animation" id="Animation_axm74"]
@@ -652,7 +652,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [Vector2(3, 3)]
+"values": [Vector2(11, 11)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -700,7 +700,7 @@ tracks/7/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [Vector2(0, 0)]
+"values": [Vector2(-32, -32)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wo607"]
@@ -789,9 +789,9 @@ advance_mode = 2
 states/End/position = Vector2(397, 39)
 states/Start/position = Vector2(70, 39)
 states/jump_end/node = SubResource("AnimationNodeAnimation_87g0j")
-states/jump_end/position = Vector2(410, 115)
+states/jump_end/position = Vector2(233, 152)
 states/jump_loop/node = SubResource("AnimationNodeAnimation_y874o")
-states/jump_loop/position = Vector2(298, 222)
+states/jump_loop/position = Vector2(397, 222)
 states/jump_mid/node = SubResource("AnimationNodeAnimation_q0bl1")
 states/jump_mid/position = Vector2(70, 222)
 states/jump_start/node = SubResource("AnimationNodeAnimation_imoic")
@@ -799,7 +799,7 @@ states/jump_start/position = Vector2(70, 115)
 states/move/node = SubResource("AnimationNodeBlendSpace1D_glxje")
 states/move/position = Vector2(233, 39)
 transitions = ["jump_start", "jump_mid", SubResource("AnimationNodeStateMachineTransition_f42ao"), "jump_mid", "jump_end", SubResource("AnimationNodeStateMachineTransition_5pkw4"), "jump_mid", "jump_loop", SubResource("AnimationNodeStateMachineTransition_oqp8c"), "jump_loop", "jump_end", SubResource("AnimationNodeStateMachineTransition_g2kvd"), "move", "jump_start", SubResource("AnimationNodeStateMachineTransition_ve1hx"), "move", "jump_mid", SubResource("AnimationNodeStateMachineTransition_ju40r"), "jump_end", "move", SubResource("AnimationNodeStateMachineTransition_iwmeu"), "Start", "move", SubResource("AnimationNodeStateMachineTransition_x4c0b"), "move", "End", SubResource("AnimationNodeStateMachineTransition_ax26n"), "jump_loop", "jump_mid", SubResource("AnimationNodeStateMachineTransition_vwc8i"), "move", "jump_loop", SubResource("AnimationNodeStateMachineTransition_rpbms")]
-graph_offset = Vector2(-268.629, 22)
+graph_offset = Vector2(-244.629, -43)
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_cnk2v"]
 
@@ -816,7 +816,8 @@ speed = 175.0
 
 [node name="Sprite2D" type="Sprite2D" parent="SpriteNode"]
 scale = Vector2(1.00864, 1)
-texture = ExtResource("4_6lila")
+texture = ExtResource("1_hiwhd")
+centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2)
@@ -862,7 +863,7 @@ collision_layer = 3
 monitorable = false
 
 [node name="FloorCollisionShape2D" type="CollisionShape2D" parent="FloorCheck"]
-position = Vector2(0, 22)
+position = Vector2(0, 32)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_et4kj")
 
