@@ -1,6 +1,7 @@
-[gd_scene load_steps=66 format=3 uid="uid://d1o4isvtrkeuj"]
+[gd_scene load_steps=67 format=3 uid="uid://d1o4isvtrkeuj"]
 
-[ext_resource type="Script" path="res://Player/player.gd" id="1_eo8wu"]
+[ext_resource type="Script" path="res://Player/PlayerTD.gd" id="1_hpfpu"]
+[ext_resource type="PackedScene" path="res://Player/PlayerHurtSound.tscn" id="2_a3vsv"]
 [ext_resource type="Texture2D" uid="uid://dceaq6cj4akrj" path="res://Art/TopDown2D/Textures/Shadows/MediumShadow.png" id="2_ukgbn"]
 [ext_resource type="Shader" path="res://WhiteColor.gdshader" id="3_f7yom"]
 [ext_resource type="PackedScene" uid="uid://di43oqfljsrhx" path="res://Overlap/Hitbox.tscn" id="3_odkie"]
@@ -776,17 +777,17 @@ blend_mode = 1
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_igqln"]
 states/Attack/node = SubResource("AnimationNodeBlendSpace2D_x0cpp")
-states/Attack/position = Vector2(416, 92)
+states/Attack/position = Vector2(376, 92)
 states/End/position = Vector2(138, 204)
 states/Idle/node = SubResource("AnimationNodeBlendSpace2D_miuj6")
 states/Idle/position = Vector2(138, 92)
 states/Roll/node = SubResource("AnimationNodeBlendSpace2D_3jjin")
-states/Roll/position = Vector2(416, 204)
+states/Roll/position = Vector2(376, 204)
 states/Run/node = SubResource("AnimationNodeBlendSpace2D_13pvn")
-states/Run/position = Vector2(416, -12)
+states/Run/position = Vector2(376, -12)
 states/Start/position = Vector2(138, -12)
 transitions = ["Idle", "Run", SubResource("AnimationNodeStateMachineTransition_m0k4n"), "Run", "Idle", SubResource("AnimationNodeStateMachineTransition_fd5go"), "Start", "Idle", SubResource("AnimationNodeStateMachineTransition_v6s0s"), "Idle", "End", SubResource("AnimationNodeStateMachineTransition_pkdu4"), "Idle", "Attack", SubResource("AnimationNodeStateMachineTransition_d8d54"), "Attack", "Idle", SubResource("AnimationNodeStateMachineTransition_cccv1"), "Idle", "Roll", SubResource("AnimationNodeStateMachineTransition_ywhcs"), "Roll", "Idle", SubResource("AnimationNodeStateMachineTransition_i8xvc")]
-graph_offset = Vector2(0, -44.2934)
+graph_offset = Vector2(-162, -94.2934)
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_unlk8"]
 
@@ -810,7 +811,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [true]
+"values": [false]
 }
 
 [sub_resource type="Animation" id="Animation_6psia"]
@@ -855,7 +856,8 @@ _data = {
 
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 2
-script = ExtResource("1_eo8wu")
+script = ExtResource("1_hpfpu")
+PlayerHurtSound = ExtResource("2_a3vsv")
 
 [node name="ShadowSprite" type="Sprite2D" parent="."]
 texture = ExtResource("2_ukgbn")
@@ -868,7 +870,6 @@ hframes = 60
 frame = 55
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 rotation = -1.5708
 shape = SubResource("CapsuleShape2D_pg01m")
 
@@ -881,10 +882,10 @@ libraries = {
 tree_root = SubResource("AnimationNodeStateMachine_igqln")
 anim_player = NodePath("../AnimationPlayer")
 parameters/playback = SubResource("AnimationNodeStateMachinePlayback_unlk8")
-parameters/Attack/blend_position = Vector2(0, 1)
-parameters/Idle/blend_position = Vector2(0, 1)
-parameters/Roll/blend_position = Vector2(0, 1)
-parameters/Run/blend_position = Vector2(0, 1)
+parameters/Attack/blend_position = Vector2(0, 0)
+parameters/Idle/blend_position = Vector2(0, 0)
+parameters/Roll/blend_position = Vector2(0, 0)
+parameters/Run/blend_position = Vector2(0, 0)
 
 [node name="HitboxPivot" type="Marker2D" parent="."]
 visible = false

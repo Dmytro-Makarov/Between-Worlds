@@ -156,7 +156,6 @@ shape = SubResource("CircleShape2D_7f68y")
 max_health = 2
 
 [node name="Hurtbox" parent="." instance=ExtResource("3_l3q4d")]
-visible = false
 collision_layer = 8
 collision_mask = 16
 
@@ -165,14 +164,12 @@ position = Vector2(0, -13)
 shape = SubResource("CapsuleShape2D_k2s6k")
 
 [node name="PlayerDetectionZone" parent="." instance=ExtResource("6_d261f")]
-visible = false
 
 [node name="CollisionShape2D" parent="PlayerDetectionZone" index="0"]
 modulate = Color(1, 1, 1, 0.498039)
 shape = SubResource("CircleShape2D_byiyn")
 
 [node name="Hitbox" parent="." instance=ExtResource("7_m4vvd")]
-visible = false
 collision_layer = 32
 collision_mask = 4
 

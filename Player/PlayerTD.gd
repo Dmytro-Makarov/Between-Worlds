@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const PlayerHurtSound = preload("res://Player/PlayerHurtSound.tscn")
+@export var PlayerHurtSound : PackedScene
 
 @export var ACCELERATION = 500
 @export var MAX_SPEED = 110

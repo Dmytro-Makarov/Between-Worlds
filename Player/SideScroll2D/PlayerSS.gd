@@ -9,7 +9,7 @@ extends CharacterBody2D
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-var direction : float = 0
+var direction : Vector2 = Vector2.ZERO
 var was_in_air : bool = false
 var animation_locked : bool = false
 
@@ -24,9 +24,9 @@ func _physics_process(delta):
 
 	# Get the input direction and handle the movement/deceleration.
 	# Control whether to move or not to move
-	direction = Input.get_axis("left", "right")
-	if direction != 0 && state_machine.check_if_can_move():
-		velocity.x = direction * speed
+	direction = Input.get_vector("left", "right", "up", "down")
+	if direction.x != 0 && state_machine.check_if_can_move():
+		velocity.x = direction.x * speed
 	else:
 		velocity.x = move_toward(velocity.x, 0, speed)
 		
@@ -35,8 +35,8 @@ func _physics_process(delta):
 	update_scale()
 
 func update_scale():
-	if direction != 0:
-		scale.x = scale.y * direction
+	if direction.x != 0:
+		scale.x = scale.y * sign(direction.x)
 
 func update_animation_parameters():
-	animation_tree.set("parameters/move/blend_position", direction)
+	animation_tree.set("parameters/move/blend_position", direction.x)

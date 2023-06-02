@@ -9,7 +9,7 @@ class_name AirState
 
 var has_double_jumped = false
 
-func state_process(delta):
+func state_process(_delta):
 	if(character.is_on_floor()):
 		next_state = landing_state
 		
@@ -28,5 +28,5 @@ func double_jump():
 	playback.travel(double_jump_animation)
 	has_double_jumped = true
 
-func _on_floor_check_area_entered(area):
+func _on_floor_check_area_entered(_area):
 	state_process(get_process_delta_time())

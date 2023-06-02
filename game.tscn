@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://cfh2e5bh33yb6"]
+
+[ext_resource type="Script" path="res://game_manager.gd" id="1_lm5bw"]
+[ext_resource type="PackedScene" uid="uid://cnkbdjdhq70uh" path="res://Levels/TopDown2D/WA_00.tscn" id="2_6lxym"]
+[ext_resource type="PackedScene" uid="uid://b4e6g1yswqsgr" path="res://UI/pause_menu.tscn" id="3_qds35"]
+
+[node name="Game" type="Node"]
+process_mode = 3
+script = ExtResource("1_lm5bw")
+
+[node name="Level" parent="." instance=ExtResource("2_6lxym")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+process_mode = 2
+
+[node name="PauseMenu" parent="CanvasLayer" node_paths=PackedStringArray("game_manager") instance=ExtResource("3_qds35")]
+game_manager = NodePath("../..")
